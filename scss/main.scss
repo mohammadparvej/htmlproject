@@ -1,0 +1,520 @@
+@import "common_property.scss";
+@import "mixin.scss";
+@import "_variable.scss";
+
+/** header and nav bar sections  */
+.container {
+  width: 1250px;
+  margin: auto;
+}
+
+header .container {
+  @include set-padding-shorthand-2(20px, 0px);
+  height: auto;
+}
+
+.flex_container {
+  @include display-property(flex);
+  align-items: center;
+}
+
+.logo {
+  flex-basis: 10%;
+}
+
+.Logo {
+  width: 100%;
+}
+
+.burger_menu_container {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu_section {
+  @include display-property(flex);
+  flex-direction: column;
+  flex-basis: 90%;
+
+  .flex_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.menu_date_time {
+  @include display-property(flex);
+  justify-content: flex-end;
+  padding-bottom: 15px;
+}
+
+.menu_bar ul li {
+  display: inline;
+  color: #363a47;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  margin: 0px 6px;
+
+  a {
+    text-decoration: none;
+    color: #363a47;
+    @include font-property(14px, Lato);
+  }
+}
+
+.date {
+  height: 13px;
+  font-size: 12.5px;
+  letter-spacing: 0.68px;
+  text-align: left;
+  font-family: Lato;
+  margin-right: 21px;
+}
+
+.arabic_font {
+  width: 37px;
+  //height: 14px;
+  font-size: 13.5px;
+  font-weight: bold;
+  letter-spacing: 0.19px;
+  text-align: center;
+}
+
+.common_button_property {
+  border-radius: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.button_field1 {
+  width: 133px;
+  height: 40px;
+  border: solid 1px #021631;
+  background-color: map_get($common-color, normal-color);
+  @include font-property(13px, Roboto);
+  font-weight: 500;
+  letter-spacing: 0.33px;
+  @extend .common_button_property
+}
+
+.button_field2 {
+  width: 166px;
+  height: 40px;
+  background-color: map_get($common-color, box-color-secondary);
+  @include font-property(14px, Roboto);
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  color: map_get($common-color, normal-color);
+  border: none;
+  @extend .common_button_property
+}
+
+.button_section_social .common_css {
+  width: 37px;
+  height: 40px;
+  background-color: map_get($common-color, box-color-secondary);
+  border: none;
+  vertical-align: top;
+  @extend .common_button_property
+}
+
+.button_section_register {
+  @include display-property(flex);
+}
+
+/***** end ******/
+
+/* marquee section */
+.news_section_container {
+  background-color: map_get($common-color, box-color-primary);
+  @include set-padding-shorthand-2(6px, 0px);
+}
+
+.new_section_common_color {
+  color: map_get($common-color, normal-color);;
+}
+
+.date_section {
+  width: 62px;
+  @include font-property(15px, Lato);
+  font-weight: bold;
+  letter-spacing: 0.32px;
+}
+
+marquee {
+  align-self: center;
+}
+
+.marquee_container {
+  @include display-property(flex);
+}
+
+.marquee_contains {
+  @include set-padding-shorthand-2(0px, 15px);
+  border-right: solid 1px;
+  font-family: Lato;
+  letter-spacing: 0.8px;
+  align-content: center;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.border_pipe {
+  border-right: solid 2px map_get($common-color, normal-color);
+  height: 20px;
+  @include set-padding-shorthand-1(24px, 0px, 4px, 10px);
+}
+
+/***** end ******/
+
+/* Image section */
+.image_container {
+  background: url('../images/layer-7.png');
+  height: 527px;
+  border: solid 1px;
+  background-size: cover;
+
+  .flex_container {
+    height: 70%;
+  }
+}
+
+.image_container_font_size {
+  text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-align: center;
+  color: map_get($common-color, normal-color);
+  @include font-property(48px, Lato);
+}
+
+.image_button {
+  border-radius: 6px;
+  background-color: map_get($common-color, box-color-primary);
+  width: 243px;
+  height: 57px;
+  @include font-property(20px, Lato);
+  font-weight: bold;
+  color: map_get($common-color, normal-color);
+  border: solid 1px map_get($common-color, box-color-primary);;
+  text-align: center;
+}
+
+.background_overlay {
+  background: grey;
+  width: 100%;
+  height: 527px;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.image_contaner_data {
+  @include display-property(flex);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/***** end ******/
+
+/* form section */
+.form_container {
+  background-color: #4a6084;
+  @include set-padding-shorthand-2(34px, 0px);
+  margin-top: 21px;
+  width: 100%;
+}
+
+
+.form_section .flex_container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -9px;
+  margin-right: -9px;
+
+  .form_input1 {
+    margin-top: 24px;
+    width: 25%;
+    @include set-padding-shorthand-2(0px, 10px);
+  }
+}
+
+.common_form_type {
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  margin-top: 7px;
+}
+
+.font_color {
+  color: #fffefe;
+}
+
+.form_input {
+  margin-top: 24px;
+  width: 25%;
+  @include set-padding-shorthand-2(0px, 10px);
+}
+
+.label_font_size {
+  color: #fffefe;
+  font-family: Roboto;
+  font-size: 14px;
+  @include font-property(14px, Roboto);
+  line-height: 1;
+}
+
+.set_form_h2_font {
+  @include font-property(32px, Lato);
+  line-height: 0.67;
+}
+
+.arrow_css {
+  width: 20px;
+  height: 12px;
+  object-fit: contain;
+  background-color: #021631;
+}
+
+.common_radio_css {
+  margin-right: 20px;
+  font-family: Roboto;
+}
+
+.radio_input {
+  margin-bottom: 0px;
+  margin-top: 23px;
+  @include display-property(flex);
+  align-items: center;
+}
+
+.up-arrow {
+  border-color: #4a6084 transparent;
+  border-style: solid;
+  border-width: 0px 20px 20px 20px;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  margin-top: -74px;
+  margin-left: 118px;
+}
+
+.property_value {
+  @include display-property(flex);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -9px;
+  margin-right: -9px;
+
+  .space_form_input {
+    margin-right: auto;
+  }
+}
+
+/***** end ******/
+
+
+/* Box section for related to image part */
+
+.box_container {
+  margin-top: -133px;
+
+  .flex_container {
+    @include display-property(flex);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .box:first-child {
+    background-color: #4a6084;
+  }
+}
+
+.box {
+  @include display-property(flex);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 269px;
+  border-radius: 6px;
+  background-color: map_get($common-color, box-color-secondary);
+  z-index: 1;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.image_font {
+  text-align: center;
+  color: map_get($common-color, normal-color);
+  @include font-property(20px, Lato);
+
+}
+
+.set_radiobutton_font {
+  font-family: Roboto;
+}
+
+.radio_button_size {
+  height: 22px;
+  width: 24px;
+  vertical-align: middle;
+}
+
+/***** end ******/
+
+/* search, Output and calculate section */
+
+.search_section {
+  margin-top: 30px;
+  @include display-property(flex);
+  align-items: center;
+}
+
+.search_add_image {
+  margin-right: 22px;
+}
+
+.search_advanced {
+  color: map_get($common-color, normal-color);
+  text-align: left;
+  @include font-property(20px, Lato);
+
+}
+
+.calculate_section {
+  @include display-property(flex);
+  justify-content: flex-end;
+}
+
+.calculate_button {
+  width: 184px;
+  border-radius: 3px;
+  background-color: map_get($common-color, box-color-secondary);
+  @include set-padding-shorthand-2(14px, 0px);
+  color: map_get($common-color, normal-color);
+  border: solid 1px #021631;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.output_social_section {
+  margin-top: 85px;
+}
+
+.output_contain {
+  @include font-property(32px, Lato);
+  line-height: 0.67;
+}
+
+.table_container {
+  width: 64%;
+  margin-top: 13px;
+}
+
+.output_social_section .flex_container {
+  @include display-property(flex);
+  justify-content: space-between;
+}
+
+.common_table {
+  border-collapse: collapse;
+
+  table, td, th {
+    border: 1px solid black;
+  }
+
+  tbody tr {
+    background: #f7f7f7;
+    color: #4a6084;
+    text-align: center;;
+  }
+
+  thead tr {
+    background: map_get($common-color, box-color-secondary);
+    color: map_get($common-color, normal-color);
+  }
+
+  thead th:nth-child(2) {
+    background: map_get($common-color, box-color-primary);
+    position: relative;
+    padding-bottom: 10px;
+
+  }
+
+  thead th:nth-child(2):before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    border-top: 23px solid #d6ab2d;
+    border-right: 265px solid #d6ab2d;
+  }
+
+}
+
+.table_data {
+  width: 292px;
+  height: 66px;
+  @include font-property(18px, Lato);
+  font-weight: bold;
+}
+
+.table_header {
+  width: 292px;
+  height: 74px;
+  @include font-property(20px, Lato);
+  border: none;
+}
+
+.social-icon {
+  border-radius: 59%;
+  padding: 12px;
+  background-color: map_get($common-color, normal-color);
+  border: none;
+  margin-right: 10px;
+}
+
+.social_activity_section {
+  margin-right: 33px;
+}
+
+.social_activity-section-title {
+  @include font-property(18px, Lato);
+  line-height: 0.67;
+  color: map_get($common-color, normal-color);
+}
+
+/* end */

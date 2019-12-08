@@ -1,0 +1,71 @@
+@import "../mixin";
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+  .container {
+    width: auto;
+    margin: 0px 23px;
+  }
+
+  .news_section_container {
+    clear: both;
+  }
+
+  .burger_menu_container {
+    @include display-property(none);
+  }
+
+  .menu_section {
+    text-align: left;
+    width: 100%;
+  }
+
+  .menu_date_time div {
+    @include display-property(none);
+  }
+
+  .form_input {
+    width: 50%;
+  }
+
+  .form_section .flex_container .form_input1 {
+    width: 50%;
+  }
+
+  .common_table thead th:nth-child(2):before {
+    border-right: 190px solid #d6ab2d;
+  }
+
+  .box_container .flex_container {
+    @include direction-flex(row);
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    margin: 10px;
+    flex-basis: 45%;
+
+    &:last-child {
+      margin: 10px;
+    }
+  }
+
+  .menu_section .navbar_section {
+    flex-wrap: wrap;
+  }
+
+  .menu_bar ul {
+    @include display-property(flex);
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+
+  .table_container {
+    width: 60%;
+  }
+
+  .social_activity_section {
+    margin-right: 0px;
+  }
+}

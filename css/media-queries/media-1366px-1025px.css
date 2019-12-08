@@ -1,0 +1,41 @@
+@media only screen and (max-width: 1366px) and (min-width: 1025px) {
+  .container {
+    width: auto;
+    margin: 0px 23px; }
+
+  header .container {
+    height: auto; }
+
+  .news_section_container {
+    clear: both; }
+
+  .burger_menu_container {
+    display: none; }
+
+  .menu_section {
+    text-align: left;
+    width: 100%; }
+
+  .menu_date_time {
+    padding-bottom: 0px; }
+
+  .box_container .flex_container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+
+  .box {
+    margin: 10px;
+    flex-basis: 22%; }
+    .box:last-child {
+      margin: 10px; }
+
+  .menu_section .navbar_section {
+    flex-wrap: wrap; }
+
+  .menu_bar {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-end; } }
+
+/*# sourceMappingURL=media-1366px-1025px.css.map */

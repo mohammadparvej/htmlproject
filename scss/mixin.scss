@@ -1,0 +1,20 @@
+@mixin display-property($value) {
+  display: $value;
+}
+
+@mixin font-property($size,$type) {
+  font-size: $size;
+  font-family: $type;
+}
+
+@mixin direction-flex($direction) {
+  flex-direction: $direction;
+}
+
+@mixin set-padding-shorthand-1($top , $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin set-padding-shorthand-2($column, $row) {
+  padding: $column $row;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;AACX,IAAK;EACH,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;;AAGd,CAAE;EACA,UAAU,EAAE,UAAU",
+"sources": ["../scss/common_property.scss"],
+"names": [],
+"file": "common_property.css"
+}

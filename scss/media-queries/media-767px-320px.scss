@@ -1,0 +1,146 @@
+@import "../mixin";
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+
+  .container {
+    width: auto;
+    margin: 0px 23px;
+  }
+
+  header .container {
+    padding: 12px 0px;
+    height: auto;
+  }
+
+  .Logo {
+    width: 45%;
+  }
+
+  header .flex_container {
+    @include direction-flex(column);
+    align-items: unset;
+  }
+
+  .news_section_container {
+    clear: both;
+  }
+
+  .burger_menu_container {
+    @include display-property(inline-block);
+  }
+
+  .menu_section {
+    text-align: left;
+    width: 100%;
+    @include display-property(none);
+
+    .flex_container {
+      @include direction-flex(column);
+      justify-content: flex-start;
+      align-items: unset;
+    }
+  }
+
+  .menu_bar ul li {
+    margin: 4px 6px;
+  }
+
+  .menu_date_time div {
+    @include display-property(none);
+  }
+
+  //.menu_section
+
+  .navbar_section .button_section_social {
+    @include direction-flex(row);
+  }
+
+  .navbar_section .menu_bar ul {
+    @include display-property(flex);
+    @include direction-flex(column);
+    padding: 0px;
+  }
+
+  .button_section_register button {
+    margin-bottom: 10px;
+  }
+
+  .box_container .flex_container {
+    @include display-property(flex);
+    @include direction-flex(column);
+    justify-content: space-between;
+  }
+
+  .box {
+    width: 100%;
+    margin-top: 19px;
+
+    &:last-child {
+      margin-top: 19px;
+    }
+  }
+
+  .image_container_font_size {
+    font-size: 30px;
+  }
+
+  .form_section .flex_container .form_input1 {
+    width: 100%;
+  }
+
+  .form_section .flex_container {
+    @include direction-flex(column);
+  }
+
+  .form_input {
+    margin-top: 24px;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .set_form_h2_font {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .radio_input h2 {
+    margin-right: 20px;
+    font-size: 17px;
+  }
+
+  .radio_input div {
+    margin: 0px;
+  }
+
+  .property_value {
+    @include direction-flex(column);
+  }
+
+  .calculate_section {
+    justify-content: center;
+  }
+
+  .common_table thead th:nth-child(2):before {
+    border-right: 97px solid #d6ab2d;
+  }
+
+  .social_activity_section {
+    margin-right: 0px;
+  }
+
+  .social_activity-section-title {
+    text-align: center
+  }
+
+  .table_container {
+    width: 100%;
+  }
+
+  .output_social_section .flex_container {
+    @include direction-flex(column);
+  }
+
+  .output_contain {
+    text-align: center;
+  }
+}
